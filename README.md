@@ -56,11 +56,11 @@ cd win32
 - asar.app **(解譯的 skype desktop 業務邏輯)**
 - img-route **(存放判斷過程需要的圖片 )**
 - win32 **(主程序目錄)**
-  | - `main.py` **(主程序python)**
-  | - `string_pic.py` **(通過pic2py.py產生的圖像base64)**
-  | - `test_decrypt.py` **(驗證加解密方式)(測試用)**
-  | - `win32-build.bat` **(封裝`main.py` 成 正式exe檔)**
-  | - `win32-dev.bat` **(封裝`main.py` 成 debug用exe檔, 會有log產生)**
+  - | - `main.py` **(主程序python)**
+  - | - `string_pic.py` **(通過pic2py.py產生的圖像base64)**
+  - | - `test_decrypt.py` **(驗證加解密方式)(測試用)**
+  - | - `win32-build.bat` **(封裝`main.py` 成 正式exe檔)**
+  - | - `win32-dev.bat` **(封裝`main.py` 成 debug用exe檔, 會有log產生)**
 - `image.ipynb` **(測試圖像模糊化Jupyter note)**
 - `MS.txt` **(Microsoft Windows 的視窗訊號對應文件)** 
 - `pic2py.py` **(用以將 `img-route` 內的圖片壓成 base64 string )**
