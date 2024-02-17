@@ -1,0 +1,7 @@
+__pycache__*
+.vscode*
+asar.app*
+dist*
+build*
+*.spec
+resources*

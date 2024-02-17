@@ -1,0 +1,1 @@
+pyinstaller -y -F -w "C:\Users\snow.jhung\rvProjects\SkPy_Login/win32/main.py" --paths="C:\Users\snow.jhung\Anaconda3\envs\python-37-skype-login\Lib\site-packages\cv2"

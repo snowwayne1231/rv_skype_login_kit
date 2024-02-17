@@ -1,0 +1,1 @@
+pyinstaller -y -F --log-level DEBUG -n dev  "./main.py" --paths="C:\Users\snow.jhung\Anaconda3\envs\python-37-skype-login\Lib\site-packages\cv2"
