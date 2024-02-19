@@ -17,37 +17,49 @@ pip install -r requirements.txt
 ```
 
 
-* build:
+* Build prod:
 
 ```Shell
 cd win32
 ./win32-build.bat
 ```
+執行完後會在目錄 win32/dist/ 內產生檔案 `main.exe` 則是正式的程序
 
+* Build dev:
+```Shell
+cd win32
+.\win32-dev.bat
+```
+執行完後會在目錄 win32/dist/ 內產生檔案 `dev.exe` 此為debug版本會在運作時產生logging
+
+---
 
 * Dev steps:
 
-1. copy images which need be reacted to folder "img-route"
+1. 將需要的圖片copy至 "img-route" 目錄
 
-2. run "pic2py.py" make static images file into python object
+2. 執行 `pic2py.py` 讓靜態圖片轉換成base64的python string
 
-3. add load data from "string_pc.py"
+3. 將產生的 `string_pc.py` 檔案移至 win32 目錄底下覆蓋
+
+4. 修改 `main.py` 內 map_images 的陣列, 增加自己有新增的對應圖片名稱
 ```Python
 map_images = [
     ....
+    {'name': '[圖片檔名]', 'img': Image.open(BytesIO(base64.b64decode([img+圖片檔名])))},
 ]
 ```
 
+
 * Run test
+ -- -a 與 -p 必須同時給予, 亦或者給 -c，否則報錯
+ -- -c (可選) 如果有給就忽略 -a與-p
+ -- -t (可選) 預設為2秒
 ```Shell
 cd win32
-python main.py -a [帳號] -p [密碼] -t [等待時間] -c [壓縮碼]
+python main.py -a [帳號] -p [密碼] -t [每次指令等待時間] -c [壓縮碼]
 ```
-or
-```Shell
-cd win32
-./win32-dev.bat
-```
+
 
 ---
 
